@@ -18,18 +18,18 @@
     <ClCompile Include="CandySIMD.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="imageio.cpp">
+    <ClCompile Include="BMPImage.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="BMP.cpp">
+    <ClCompile Include="fast-edge.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="imageio.h">
+    <ClInclude Include="BMPImage.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="BMP.h">
+    <ClInclude Include="fast-edge.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
