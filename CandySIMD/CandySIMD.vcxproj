@@ -151,7 +151,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BMP.cpp" />
     <ClCompile Include="CandySIMD.cpp" />
+    <ClCompile Include="imageio.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BMP.h" />
+    <ClInclude Include="imageio.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

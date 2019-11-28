@@ -18,5 +18,19 @@
     <ClCompile Include="CandySIMD.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="imageio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BMP.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imageio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BMP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
