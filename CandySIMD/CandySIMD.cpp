@@ -25,18 +25,29 @@
 */
 
 #include <stdio.h>
+#include <iostream>
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include <time.h>
 #include "imageio.h"
 #include "fast-edge.h"
+#include <fstream>
 
 int main()
 {
-	FILE* fp;
+	std::ifstream inp{ "test.bmp", std::ios_base::binary };
+	if (!inp.is_open()) {
+		printf("ERROR: can't open 1212212test.bmg!");
+	}
+	char type[4];
+	inp.read(type, 2);
+	std::cout << _HEX << type << std::endl;
+	inp.close();
+
+	FILE* fp = NULL;
 	errno_t err;
-	err = fopen_s(&fp, "test.bmp", "rb");
+	err = fopen_s(&fp, "24_500.bmp", "rb");
 	int w, h, i;
 	if (err == 0) {
 		printf("ERROR: can't open test.bmg!");
