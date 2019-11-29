@@ -2,10 +2,36 @@
 //
 
 #include <iostream>
+#include "BMPImage.h"
+#include "fast-edge.h"
+
+using namespace std;
+const char path_in[20] = "image\\test.bmp";
+const char path_gs[20] = "image\\gs_out.bmp";
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	cout << "init read test.bmp" << endl;
+
+	BMPImage *image_in = new BMPImage();
+	image_in->open(path_in);
+
+	BMPImage* image_gs = new BMPImage(image_in->m_width, image_in->m_height, image_in->m_depth);
+
+	cout << "read over, start gaussian noise reduce" << endl;
+
+	gaussian_noise_reduce(image_in, image_gs);
+
+	cout << "gaussian noise reduce end, start save" << endl;
+
+	image_gs->save(path_gs);
+
+	cout << "save end" << endl;
+
+	image_in->~BMPImage();
+	image_gs->~BMPImage();
+
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
