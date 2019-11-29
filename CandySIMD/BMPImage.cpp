@@ -89,7 +89,7 @@ BMPImage::~BMPImage() {
 bool BMPImage::open(const char* bmp_file_path) {
 
 	clear();
-
+	
 	ifstream im_file(bmp_file_path, ios::binary);
 
 	// 检查文件是否打开
@@ -198,14 +198,17 @@ bool BMPImage::save(const char* save_path) {
 	// ---------------------保存BMP文件头-----------------------
 
 	out_image.write((char*)&m_file_header, sizeof(BMPFileHeader));
+	cout << &m_file_header << " " << sizeof(BMPFileHeader) << endl;
 
 	// ---------------------保存BMP信息头-----------------------
 
 	out_image.write((char*)&m_info_header, sizeof(BMPInfoHeader));
+	cout << &m_info_header << " " << sizeof(BMPInfoHeader) << endl;
 
 	// ---------------------保存图像数据------------------------
 
 	out_image.write((char*)m_data, m_info_header.biSizeImage);
+	cout << m_data << " " << m_info_header.biSizeImage << endl;
 
 	out_image.close();
 
